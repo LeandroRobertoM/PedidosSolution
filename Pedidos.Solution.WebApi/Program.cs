@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Pedidos.Solution.Infra.Data.Migrations.Configuracao;
 
 namespace Pedidos.Solution.WebApi
 {
@@ -13,13 +14,20 @@ namespace Pedidos.Solution.WebApi
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args)
+                .Build()
+                .MigrateDatabase()
+                .Run();
+            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
+            
+            
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    
                     webBuilder.UseStartup<Startup>();
                 });
     }

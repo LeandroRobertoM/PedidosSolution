@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using FluentMigrator.Runner;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Pedidos.Solution.Infra.Data.Migrations.Configuracao;
 
 namespace Pedidos.Solution.WebApi
 {
@@ -26,12 +29,23 @@ namespace Pedidos.Solution.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+       
+
             services.AddCors(o => o.AddPolicy("AllowAll", builder =>
             {
                 builder.WithOrigins("http://localhost:4200/")
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
+            services.AddSingleton<DapperContext>();
+            services.AddSingleton<Database>();
+
+            services.AddLogging(c => c.AddFluentMigratorConsole())
+           .AddFluentMigratorCore()
+           .ConfigureRunner(c => c.AddSqlServer2012()
+           .WithGlobalConnectionString(Configuration.GetConnectionString("SqlConnection"))
+           .ScanIn(Assembly.GetExecutingAssembly()).For.Migrations());
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

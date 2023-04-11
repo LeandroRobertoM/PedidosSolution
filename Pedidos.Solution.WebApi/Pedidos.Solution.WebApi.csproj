@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pedidos.Solution.Infra.Data.Migrations\Pedidos.Solution.Infra.Data.Migrations.csproj" />
     <ProjectReference Include="..\PedidosSolution.Domain\PedidosSolution.Domain.csproj" />
     <ProjectReference Include="..\PedidosSolution.Infra.Data\PedidosSolution.Infra.Data.csproj" />
   </ItemGroup>

@@ -11,11 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pedidos.Solution.Infra.Data
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pedidos.Solution.Test", "Pedidos.Solution.Test", "{C72718A8-EA23-4E07-8A55-5787DAD0C05B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PedidosSolution.Domain", "PedidosSolution.Domain\PedidosSolution.Domain.csproj", "{5E353BFD-C78D-4E14-9547-8AF03F05A4E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PedidosSolution.Domain", "PedidosSolution.Domain\PedidosSolution.Domain.csproj", "{5E353BFD-C78D-4E14-9547-8AF03F05A4E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PedidosSolution.Infra.Data", "PedidosSolution.Infra.Data\PedidosSolution.Infra.Data.csproj", "{E2F445AA-BF80-4B03-ADEE-DCF6B331A72B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PedidosSolution.Infra.Data", "PedidosSolution.Infra.Data\PedidosSolution.Infra.Data.csproj", "{E2F445AA-BF80-4B03-ADEE-DCF6B331A72B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pedidos.Solution.WebApi", "Pedidos.Solution.WebApi\Pedidos.Solution.WebApi.csproj", "{0E55680C-BBB2-417E-8759-064B6FB196A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pedidos.Solution.WebApi", "Pedidos.Solution.WebApi\Pedidos.Solution.WebApi.csproj", "{0E55680C-BBB2-417E-8759-064B6FB196A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pedidos.Solution.Infra.Data.Migrations", "Pedidos.Solution.Infra.Data.Migrations", "{C8531576-AC30-4E65-A024-44E336B72BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pedidos.Solution.Infra.Data.Migrations", "Pedidos.Solution.Infra.Data.Migrations\Pedidos.Solution.Infra.Data.Migrations.csproj", "{AFC4C94D-5B3C-4F8B-A50E-0DEF3593F593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,10 @@ Global
 		{0E55680C-BBB2-417E-8759-064B6FB196A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E55680C-BBB2-417E-8759-064B6FB196A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E55680C-BBB2-417E-8759-064B6FB196A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC4C94D-5B3C-4F8B-A50E-0DEF3593F593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC4C94D-5B3C-4F8B-A50E-0DEF3593F593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC4C94D-5B3C-4F8B-A50E-0DEF3593F593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC4C94D-5B3C-4F8B-A50E-0DEF3593F593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +51,8 @@ Global
 		{5E353BFD-C78D-4E14-9547-8AF03F05A4E8} = {742D1B7E-49AE-46A7-B37A-22A9A6E856CC}
 		{E2F445AA-BF80-4B03-ADEE-DCF6B331A72B} = {0AABBF46-9622-4B9F-9BBB-519F284D399E}
 		{0E55680C-BBB2-417E-8759-064B6FB196A4} = {B6D38E26-84FB-4C7C-8186-8AD85B2226F2}
+		{C8531576-AC30-4E65-A024-44E336B72BB9} = {0AABBF46-9622-4B9F-9BBB-519F284D399E}
+		{AFC4C94D-5B3C-4F8B-A50E-0DEF3593F593} = {C8531576-AC30-4E65-A024-44E336B72BB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA3F6D58-90D7-4BB2-AE80-28F071624598}
